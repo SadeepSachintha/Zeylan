@@ -175,6 +175,7 @@ header.scrolled {
 .logo span {
   background: var(--grad-cyan-magenta);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
 }
@@ -317,6 +318,7 @@ header.scrolled {
 .grad-text {
   background: var(--grad-cyan-magenta);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -382,6 +384,7 @@ header.scrolled {
   margin-bottom: 0.25rem;
   background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -827,6 +830,7 @@ section {
 input[type="range"] {
   flex-grow: 1;
   -webkit-appearance: none;
+  appearance: none;
   background: #27272a;
   height: 6px;
   border-radius: 5px;
