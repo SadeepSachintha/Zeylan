@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Custom DTF (Direct to Film) T-shirt printing in Sri Lanka. Premium, durable, stretchable prints on garments, retail and bulk orders. Customize and order via WhatsApp.">
+  <meta name="keywords" content="DTF Printing, T-Shirt Printing Sri Lanka, Custom clothing Colombo, DTF Colombo, T-shirt Customizer, Zeylan Printing">
+  <meta name="author" content="Zeylan">
+  
+  <title>Zeylan | Premium DTF T-Shirt Printing Sri Lanka</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/design_neon_skull.png">
+</head>
+<body>
+
+  <!-- Floating Background Blobs -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <!-- Header Section -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="logo-link">
+        <div class="logo-dot"></div>
+        <span>ZEYLAN</span>
+      </a>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="hamburger" id="mobile-menu-btn" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#customizer-section">T-Shirt Builder</a></li>
+        <li><a href="#advantages-section">Why DTF</a></li>
+        <li><a href="#pricing-section">Pricing</a></li>
+        <li><a href="#how-it-works-section">How It Works</a></li>
+        <li><a href="#gallery-section">Gallery</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+      
+      <button class="nav-cta" id="header-cta-btn" onclick="document.getElementById('customizer-section').scrollIntoView();">
+        Design Now
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span></span> Live Custom Mockup & Pricing Tool
+          </div>
+          <h1>Premium <span class="grad-text">DTF T-Shirt</span> Printing in Sri Lanka</h1>
+          <p class="hero-description">
+            Bring your custom designs to life with Direct to Film (DTF) technology. High-definition, stretchable, and ultra-durable prints on any fabric. No minimum order quantity!
+          </p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" id="hero-btn-start" onclick="document.getElementById('customizer-section').scrollIntoView();">
+              Start Customizing <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-secondary" id="hero-btn-pricing" onclick="document.getElementById('pricing-section').scrollIntoView();">
+              View Pricing
+            </button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3 id="stat-1">100%</h3>
+              <p>Stretch Proof</p>
+            </div>
+            <div class="stat-item">
+              <h3 id="stat-2">50+</h3>
+              <p>Washes Tested</p>
+            </div>
+            <div class="stat-item">
+              <h3 id="stat-3">LKR 0</h3>
+              <p>Setup Setup Cost</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-art-container">
+          <div class="hero-art-glow"></div>
+          <div class="hero-shirt-display">
+            <img src="assets/black_tshirt.png" alt="Zeylan Custom Printed T-Shirt Mockup" id="hero-shirt-img">
+          </div>
+          <div class="printing-badge">
+            <div class="printing-badge-icon">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+            <div class="printing-badge-text">
+              <h4>Premium DTF</h4>
+              <p>Islandwide Delivery 🇱🇰</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Customizer Section -->
+    <section class="customizer" id="customizer-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Builder</span>
+          <h2>Customize Your T-Shirt</h2>
+          <p>Select a garment color, upload your design, resize it, and see your custom T-shirt mockup live.</p>
+        </div>
+        
+        <div class="customizer-grid">
+          <!-- Preview Pane -->
+          <div class="customizer-preview-container" id="mockup-preview-pane">
+            <div class="mockup-wrapper">
+              <img src="assets/black_tshirt.png" alt="Custom T-Shirt Mockup" id="tshirt-mockup">
+              <!-- Dashed Printable Area -->
+              <div class="design-overlay-box" id="design-area">
+                <canvas id="customizer-canvas"></canvas>
+              </div>
+            </div>
+            <div class="spec-badge">
+              <span>Color: <strong id="spec-color-text">Black</strong></span>
+              <span>Print: <strong id="spec-size-text">A4 Print</strong></span>
+            </div>
+          </div>
+          
+          <!-- Controls Panel -->
+          <div class="customizer-controls">
+            <!-- 1. T-Shirt Color -->
+            <div class="control-group">
+              <h3>Select Shirt Color <span>(High-grade 180GSM Cotton)</span></h3>
+              <div class="color-options" id="color-selectors">
+                <button class="color-btn active" data-color="black" style="background-color: #0d0d0d;" title="Jet Black"></button>
+                <button class="color-btn" data-color="white" style="background-color: #ffffff;" title="Pure White"></button>
+                <button class="color-btn" data-color="cyan" style="background-color: #00f2fe;" title="Vibrant Cyan"></button>
+                <button class="color-btn" data-color="magenta" style="background-color: #fe019a;" title="Hot Magenta"></button>
+                <button class="color-btn" data-color="blue" style="background-color: #0044ff;" title="Royal Blue"></button>
+                <button class="color-btn" data-color="red" style="background-color: #ff2a2a;" title="Crimson Red"></button>
+              </div>
+            </div>
+
+            <!-- 2. Print Size & Position -->
+            <div class="control-group">
+              <h3>Print Size & Layout</h3>
+              <div class="pricing-toggle" style="margin-bottom: 1rem;">
+                <button class="pricing-tab-btn active" id="size-btn-a4" data-size="A4">A4 Standard</button>
+                <button class="pricing-tab-btn" id="size-btn-a3" data-size="A3">A3 Large</button>
+                <button class="pricing-tab-btn" id="size-btn-pocket" data-size="Pocket">Pocket Logo</button>
+              </div>
+              <div class="customizer-slider-group">
+                <div class="slider-control">
+                  <span class="slider-label">Scale</span>
+                  <input type="range" id="design-scale" min="10" max="100" value="60" aria-label="Scale Design">
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-arrows-up-down-left-right"></i> Drag and move your design directly on the T-shirt to adjust position.
+                </p>
+              </div>
+            </div>
+
+            <!-- 3. Upload or Select Artwork -->
+            <div class="control-group">
+              <h3>Upload Design <span>(PNG/JPG, transparent recommended)</span></h3>
+              <div class="artwork-selector">
+                <!-- Upload trigger -->
+                <label for="artwork-file-input" class="upload-box" id="upload-box-label">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <span>Upload Image</span>
+                  <p>PNG, JPG up to 10MB</p>
+                  <input type="file" id="artwork-file-input" accept="image/*" style="display: none;">
+                </label>
+                <!-- Preloaded Designs -->
+                <div>
+                  <h4 style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.5rem;">Sample Designs</h4>
+                  <div class="samples-grid" id="sample-designs-list">
+                    <div class="sample-item active" data-src="assets/design_neon_skull.png">
+                      <img src="assets/design_neon_skull.png" alt="Neon Cyber Skull">
+                    </div>
+                    <div class="sample-item" data-src="assets/design_retro_surf.png">
+                      <img src="assets/design_retro_surf.png" alt="Retro Surfer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Price and Call To Action -->
+            <div class="customizer-summary-card">
+              <div class="summary-price-row">
+                <span>Estimated Total:</span>
+                <span class="price" id="customizer-price-display">LKR 1,800</span>
+              </div>
+              <div class="action-btns">
+                <button class="btn btn-primary" id="order-whatsapp-btn">
+                  <i class="fa-brands fa-whatsapp" style="font-size: 1.25rem;"></i> Order via WhatsApp
+                </button>
+                <button class="btn btn-secondary" id="reset-customizer-btn">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why DTF Advantages Section -->
+    <section class="advantages" id="advantages-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">High-Tech Printing</span>
+          <h2>The DTF Advantage</h2>
+          <p>Direct to Film technology is transforming custom apparel. Here is why it beats screen printing and standard HTV vinyl.</p>
+        </div>
+        
+        <div class="advantages-grid">
+          <div class="advantage-card card-glass" id="adv-1">
+            <div class="advantage-icon"><i class="fa-solid fa-palette"></i></div>
+            <h3>Unlimited Colors</h3>
+            <p>Prints crisp, photorealistic, full-color designs including fine gradients and shadows. No extra charge per color!</p>
+          </div>
+          <div class="advantage-card card-glass" id="adv-2">
+            <div class="advantage-icon"><i class="fa-solid fa-arrows-spin"></i></div>
+            <h3>High Stretch & Durability</h3>
+            <p>Our DTF inks bond deep into fabric fibers. The print stretches with the garment and won't crack or peel under pressure.</p>
+          </div>
+          <div class="advantage-card card-glass" id="adv-3">
+            <div class="advantage-icon"><i class="fa-solid fa-ban"></i></div>
+            <h3>Zero Minimum Order</h3>
+            <p>Need just one custom shirt? No problem! Screen printing requires expensive screen setup, but DTF requires zero setup cost.</p>
+          </div>
+          <div class="advantage-card card-glass" id="adv-4">
+            <div class="advantage-icon"><i class="fa-solid fa-tshirt"></i></div>
+            <h3>Prints on All Fabrics</h3>
+            <p>Works flawlessly on 100% Cotton, Polyester, Blends, Canvas, Denim, and Nylon - regardless of shirt color!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Pricing Calculator Section -->
+    <section class="pricing" id="pricing-section">
+      <div class="container pricing-container">
+        <div class="pricing-calculator-card" id="pricing-calculator">
+          <div class="pricing-toggle">
+            <button class="pricing-tab-btn active" id="calc-tab-tshirt">T-Shirt + Print Bundle</button>
+            <button class="pricing-tab-btn" id="calc-tab-sheets">DTF Print Sheets Only</button>
+          </div>
+          
+          <!-- Mode 1: T-Shirt + Print Bundle -->
+          <div id="calc-tshirt-fields">
+            <div class="calc-group">
+              <label for="calc-shirt-color">Shirt Base Color</label>
+              <select class="calc-select" id="calc-shirt-color">
+                <option value="black">Black & Dark Colors (Premium Cotton)</option>
+                <option value="white">White & Light Colors (Premium Cotton)</option>
+              </select>
+            </div>
+            <div class="calc-group">
+              <label for="calc-print-size">Print Size Selection</label>
+              <select class="calc-select" id="calc-print-size">
+                <option value="A4">A4 Standard Print (21 x 29.7 cm)</option>
+                <option value="A3">A3 Large Print (29.7 x 42 cm)</option>
+                <option value="Pocket">Pocket Size Print (10 x 10 cm)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Mode 2: DTF Sheet Only -->
+          <div id="calc-sheets-fields" style="display: none;">
+            <div class="calc-group">
+              <label for="calc-sheet-size">Sheet Layout Size</label>
+              <select class="calc-select" id="calc-sheet-size">
+                <option value="A4">A4 Sheet - LKR 450</option>
+                <option value="A3">A3 Sheet - LKR 800</option>
+                <option value="Meter">Meter Roll (58cm x 100cm) - LKR 2,500</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <label for="calc-quantity">Order Quantity</label>
+            <input type="number" class="calc-input" id="calc-quantity" min="1" value="1" placeholder="Enter quantity">
+          </div>
+
+          <div class="calc-result-box">
+            <span class="result-label">Estimated Total Price:</span>
+            <span class="result-value" id="calc-price-display">LKR 1,800</span>
+          </div>
+        </div>
+
+        <div class="pricing-info-pane">
+          <span class="section-tag" style="display:block; margin-bottom: 0.5rem;">Competitive Rates</span>
+          <h3>Fair Pricing, Bulk Discounts</h3>
+          <p>
+            Whether you are ordering a single custom T-shirt for a gift or 500 T-shirts for a corporate event, we offer the best rates in Sri Lanka.
+          </p>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-circle-check"></i> <span>Automatic bulk discounts applied above 10 units.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Custom size sheets and meter rolls for apparel retailers.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Islandwide courier delivery with tracking.</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> <span>Special wholesale pricing for clothing brands.</span></li>
+          </ul>
+          <button class="btn btn-primary" onclick="document.getElementById('customizer-section').scrollIntoView();">
+            Design & Estimate <i class="fa-solid fa-calculator"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple Process</span>
+          <h2>How To Order</h2>
+          <p>Get your custom high-quality T-shirts printed and delivered to your doorstep in 3 simple steps.</p>
+        </div>
+        
+        <div class="timeline-grid">
+          <div class="timeline-step" id="step-1">
+            <div class="step-num">1</div>
+            <h3>Create & Preview</h3>
+            <p>Upload your design or choose one of our templates. Adjust position and scale using our live builder.</p>
+          </div>
+          <div class="timeline-step" id="step-2">
+            <div class="step-num">2</div>
+            <h3>WhatsApp Order</h3>
+            <p>Click order to send details to our WhatsApp team. We'll confirm the designs, quantity, and delivery address.</p>
+          </div>
+          <div class="timeline-step" id="step-3">
+            <div class="step-num">3</div>
+            <h3>DTF Print & Press</h3>
+            <p>We print your design using industrial-grade DTF machinery and heat-press it onto a premium cotton shirt.</p>
+          </div>
+          <div class="timeline-step" id="step-4">
+            <div class="step-num">4</div>
+            <h3>Islandwide Delivery</h3>
+            <p>We pack your order carefully and deliver it to any location in Sri Lanka within 2-4 working days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery / Portfolio Section -->
+    <section class="gallery" id="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Recent Works</span>
+          <h2>Printed Portfolio</h2>
+          <p>Check out some of our custom prints, DTF sheets, and high-quality shirt creations.</p>
+        </div>
+        
+        <div class="portfolio-grid">
+          <div class="portfolio-item" id="port-1">
+            <img src="assets/design_neon_skull.png" alt="Neon Skull Print Mockup">
+            <div class="portfolio-overlay">
+              <span>T-Shirt Print</span>
+              <h3>Cyber Skull DTF</h3>
+            </div>
+          </div>
+          <div class="portfolio-item" id="port-2">
+            <img src="assets/design_retro_surf.png" alt="Retro Surf Print Mockup">
+            <div class="portfolio-overlay">
+              <span>T-Shirt Print</span>
+              <h3>Retro Wave Print</h3>
+            </div>
+          </div>
+          <div class="portfolio-item" id="port-3">
+            <img src="assets/black_tshirt.png" alt="Custom Graphic Black Tee">
+            <div class="portfolio-overlay">
+              <span>Apparel</span>
+              <h3>Zeylan Black Tee</h3>
+            </div>
+          </div>
+          <div class="portfolio-item" id="port-4">
+            <img src="assets/white_tshirt.png" alt="Custom Graphic White Tee">
+            <div class="portfolio-overlay">
+              <span>Apparel</span>
+              <h3>Zeylan White Tee</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Order Form Section -->
+    <section class="contact" id="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-tag">Get in Touch</span>
+          <h3>Have Questions? Let's Talk</h3>
+          <p>
+            Got a custom bulk inquiry or want a specific apparel color/style not listed in the customizer? Contact us, we are ready to assist.
+          </p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text">
+                <p>Call / WhatsApp</p>
+                <a href="https://wa.me/94771234567" target="_blank" id="contact-phone-link">+94 77 123 4567</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text">
+                <p>Email</p>
+                <a href="mailto:info@zeylan.lk" id="contact-email-link">info@zeylan.lk</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text">
+                <p>Location</p>
+                <a href="#" id="contact-location-link">Colombo, Sri Lanka 🇱🇰</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-card" id="contact-form-container">
+          <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent. We will contact you soon.'); this.reset();">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="name@example.com" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="How can we help?" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Describe your print project or requirements..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="form-submit-btn">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="logo">
+            <div class="logo-dot"></div>
+            <span>ZEYLAN</span>
+          </a>
+          <p>Custom DTF prints & premium custom T-shirt supplier in Sri Lanka. Exceptional durability, vibrant colors, fast turnaround times.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#customizer-section">T-Shirt Builder</a></li>
+            <li><a href="#advantages-section">Why DTF</a></li>
+            <li><a href="#pricing-section">Pricing Calculator</a></li>
+            <li><a href="#gallery-section">Recent Work</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="#customizer-section">Direct to Film Prints</a></li>
+            <li><a href="#customizer-section">Custom T-Shirt Pressing</a></li>
+            <li><a href="#pricing-section">Meter Roll Wholesale</a></li>
+            <li><a href="#contact-section">Bulk Orders (100+ shirts)</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zeylan. All rights reserved. DTF T-Shirt Printing Sri Lanka.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/18wJXaD99m/?mibextid=wwXIfr" target="_blank" class="social-btn" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/94771234567" target="_blank" class="social-btn" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
