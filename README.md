@@ -1,12 +1,12 @@
 # 👕 Zeylan — Premium DTF T-Shirt Printing Web Application
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/zeylanclothing/deploy-status)](https://app.netlify.com/sites/zeylanclothing/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9b1f8a2c-4e5d-4f2a-8c3b-1a2b3c4d5e6f/deploy-status)](https://app.netlify.com/sites/zeylanclothing/deploys)
 &nbsp;
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**Zeylan** is a premium, interactive web application for Direct to Film (DTF) T-shirt printing in Sri Lanka, designed and developed by **SS Labz**. It features a live visual customizer and dynamic bulk-pricing calculator, letting users design and order high-definition, durable custom apparel.
+**Zeylan** is a premium, interactive web application for Direct to Film (DTF) T-shirt printing in Sri Lanka, designed and developed by **SS Labz**. It features a live visual customizer and dynamic bulk pricing calculator.
 
 🚀 **Live Site:** [Zeylan on Netlify](https://zeylanclothing.netlify.app)
 
@@ -32,7 +32,7 @@
   * Auto-discounts for sheets/rolls: 10% off at 10+ sheets, 20% off at 30+ sheets.
 
 ### 3. 💬 WhatsApp Order Integration
-* One-click checkout generates a structured text template detailing the color, print size, positioning, scaling percentage, and estimated cost, prompting the customer to send their high-res files on WhatsApp for final confirmation.
+* One-click checkout generates a structured text template detailing the color, print size, positioning, scaling percentage, and estimated cost, prompting the customer to send their high-res files on WhatsApp.
 
 ### 4. 💎 Premium Cyberpunk Aesthetics
 * Dark mode theme featuring dynamic glowing background blobs, glassmorphic elements (`backdrop-filter`), smooth hover effects, micro-animations, and modern typography (using Google Fonts).
