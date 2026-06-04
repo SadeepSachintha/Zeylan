@@ -114,7 +114,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const drawX = (state.x * canvas.width) - (renderWidth / 2);
     const drawY = (state.y * canvas.height) - (renderHeight / 2);
 
-    ctx.drawImage(state.image, drawX, drawY, renderWidth, renderHeight);
+    if (state.image.src && state.image.src.includes('logo.jpg')) {
+      // Create a temporary canvas to get the pixel data and filter out the black background
+      const tempCanvas = document.createElement('canvas');
+      tempCanvas.width = renderWidth;
+      tempCanvas.height = renderHeight;
+      const tempCtx = tempCanvas.getContext('2d');
+      tempCtx.drawImage(state.image, 0, 0, renderWidth, renderHeight);
+      
+      try {
+        const imgData = tempCtx.getImageData(0, 0, renderWidth, renderHeight);
+        const data = imgData.data;
+        
+        // Loop through pixels and make very dark pixels transparent
+        for (let i = 0; i < data.length; i += 4) {
+          const r = data[i];
+          const g = data[i+1];
+          const b = data[i+2];
+          // If the pixel is very dark (close to black), set alpha to 0
+          if (r < 35 && g < 35 && b < 35) {
+            data[i+3] = 0;
+          }
+        }
+        tempCtx.putImageData(imgData, 0, 0);
+        ctx.drawImage(tempCanvas, drawX, drawY);
+      } catch (e) {
+        // Fallback to regular draw in case of CORS or other issues
+        ctx.drawImage(state.image, drawX, drawY, renderWidth, renderHeight);
+      }
+    } else {
+      ctx.drawImage(state.image, drawX, drawY, renderWidth, renderHeight);
+    }
   }
 
   // Set design image source

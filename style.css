@@ -179,6 +179,22 @@ header.scrolled {
   position: relative;
 }
 
+.logo-img {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: #000;
+  transition: var(--transition);
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.08) rotate(5deg);
+  border-color: var(--cyan);
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+}
+
 .logo-dot {
   width: 8px;
   height: 8px;
