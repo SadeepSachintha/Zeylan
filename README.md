@@ -6,7 +6,7 @@
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**Zeylan** is a premium, interactive web application for Direct to Film (DTF) T-shirt printing in Sri Lanka. It features a live visual customizer and dynamic bulk-pricing calculator, letting users design and order high-definition, durable custom apparel.
+**Zeylan** is a premium, interactive web application for Direct to Film (DTF) T-shirt printing in Sri Lanka, designed and developed by **SS Labz**. It features a live visual customizer and dynamic bulk-pricing calculator, letting users design and order high-definition, durable custom apparel.
 
 🚀 **Live Site:** [Zeylan on Netlify](https://zeylanclothing.netlify.app)
 
@@ -108,6 +108,13 @@ The project includes a `netlify.toml` file configured for hosting the static fil
    * **Build command:** (Leave blank)
    * **Publish directory:** `.`
 6. Click **Deploy site**. Netlify will automatically rebuild and deploy the site whenever you push changes to your main branch.
+
+---
+
+## 👨‍💻 Credits & Team
+
+* **Developed by:** [SS Labz](https://github.com/SadeepSachintha)
+* **Lead Developer:** Sadeep Sachintha
 
 ---
 

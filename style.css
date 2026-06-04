@@ -1333,6 +1333,19 @@ footer {
   font-size: 0.85rem;
 }
 
+.footer-developer-link {
+  color: var(--cyan);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+.footer-developer-link:hover {
+  color: var(--magenta);
+  text-shadow: 0 0 8px rgba(254, 1, 154, 0.4);
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
