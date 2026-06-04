@@ -113,7 +113,7 @@ The project includes a `netlify.toml` file configured for hosting the static fil
 
 ## 👨‍💻 Credits & Team
 
-* **Developed by:** [SS Labz](https://github.com/SadeepSachintha)
+* **Developed by:** [SS Labz](https://www.facebook.com/share/1Ea1iyZUvq/?mibextid=wwXIfr)
 * **Lead Developer:** Sadeep Sachintha
 
 ---
