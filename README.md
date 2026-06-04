@@ -1,6 +1,6 @@
 # 👕 Zeylan — Premium DTF T-Shirt Printing Web Application
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-status-id/deploy-status)](https://app.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/zeylanclothing/deploy-status)](https://app.netlify.com/sites/zeylanclothing/deploys)
 &nbsp;
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -8,7 +8,7 @@
 
 **Zeylan** is a premium, interactive web application for Direct to Film (DTF) T-shirt printing in Sri Lanka. It features a live visual customizer and dynamic bulk-pricing calculator, letting users design and order high-definition, durable custom apparel.
 
-🚀 **Live Site:** [Zeylan on Netlify](https://zeylan.netlify.app) _(Placeholder link)_
+🚀 **Live Site:** [Zeylan on Netlify](https://zeylanclothing.netlify.app)
 
 ---
 
