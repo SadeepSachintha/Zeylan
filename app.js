@@ -469,13 +469,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const printSizeLabel = state.printSize === 'Pocket' ? 'Pocket Logo' : `${state.printSize} Print`;
     const scalePercentage = Math.round(state.scale * 100);
     
-    const msg = `Hello Zeylan! 🇱🇰\n\nI would like to place a custom DTF T-shirt print order from the website builder:\n` +
+    const msg = `Hello Zeylan!\n\nI would like to place a custom DTF T-shirt print order from the website builder:\n` +
                 `----------------------------------------\n` +
-                `👕 Garment Color: ${colorLabel}\n` +
-                `📐 Print Size: ${printSizeLabel}\n` +
-                `🔍 Scale: ${scalePercentage}%\n` +
-                `📍 Layout Center: X = ${Math.round(state.x * 100)}%, Y = ${Math.round(state.y * 100)}%\n` +
-                `💵 Estimated Cost: LKR ${finalPrice.toLocaleString()}\n` +
+                `Garment Color: ${colorLabel}\n` +
+                `Print Size: ${printSizeLabel}\n` +
+                `Scale: ${scalePercentage}%\n` +
+                `Layout Center: X = ${Math.round(state.x * 100)}%, Y = ${Math.round(state.y * 100)}%\n` +
+                `Estimated Cost: LKR ${finalPrice.toLocaleString()}\n` +
                 `----------------------------------------\n\n` +
                 `Please let me know how to send my high-resolution PNG file to complete the print! Thank you.`;
 
