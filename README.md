@@ -1,6 +1,6 @@
 # 👕 Zeylan — Premium DTF T-Shirt Printing Web Application
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7b2d704b-77c4-4ce4-b4be-e4d10021ee43/deploy-status)](https://app.netlify.com/projects/zeylanclothing/deploys)
+[![Netlify Status](https://img.shields.io/netlify/7b2d704b-77c4-4ce4-b4be-e4d10021ee43?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com/projects/zeylanclothing/deploys)
 &nbsp;
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
